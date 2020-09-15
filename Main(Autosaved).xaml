@@ -1,0 +1,1461 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="516,577" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.DocuSign.Activities" xmlns:uda="clr-namespace:UiPath.DocuSign.Activities;assembly=UiPath.DocuSign.Activities" xmlns:uds="clr-namespace:UiPath.DocuSign.Service;assembly=UiPath.DocuSign" xmlns:use="clr-namespace:UiPath.Swagger.Enums;assembly=UiPath.DocuSign" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.DocuSign" xmlns:uss="clr-namespace:UiPath.Swagger.Services;assembly=UiPath.DocuSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.BAF.Models.Response</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Swagger.Models</x:String>
+      <x:String>System.Net</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocuSign</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="496,477" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="secure_psw" />
+      <Variable x:TypeArguments="ss:SecureString" Name="secure1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="454,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[secure_psw]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">28f344e4-01e8-4c64-b7d5-9a84ee76226e</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uda:DocuSignScopeActivity APIKey="{x:Null}" BearerToken="{x:Null}" DesignConnectionRequest="{x:Null}" ExistingConnection="{x:Null}" Password="{x:Null}" SwaggerConnection="{x:Null}" Username="{x:Null}" AuthType="OAuth2AuthorizationCode" BaseUrl="https://demo.docusign.net" ClientId="4844a4ee-3027-4e86-a07e-544cbf6d3f22" ClientSecret="[New System.Net.NetworkCredential(&quot;&quot;,secure_psw).SecurePassword]" DesignConnectionEnabled="False" DisplayName="DocuSign Application Scope" Environment="Development" ExistingConnectionType="usm:SwaggerConnection" sap:VirtualizedContainerService.HintSize="454,285" sap2010:WorkflowViewState.IdRef="DocuSignScopeActivity_1" TelemetryEnabled="False" ThrowExceptionOnError="False">
+      <uda:DocuSignScopeActivity.Body>
+        <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ubac:ScopeActivityContext" Name="ScopeActivityContext" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </uda:DocuSignScopeActivity.Body>
+      <uda:DocuSignScopeActivity.ServiceFactory>
+        <uds:DocuSignServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}" SampleDataService="{x:Null}">
+          <uds:DocuSignServiceFactory.BusinessEntityExecuteService>
+            <uss:SwaggerBusinessEntityExecuteService />
+          </uds:DocuSignServiceFactory.BusinessEntityExecuteService>
+          <uds:DocuSignServiceFactory.ConnectionService>
+            <uds:DocuSignConnectionService />
+          </uds:DocuSignServiceFactory.ConnectionService>
+          <uds:DocuSignServiceFactory.MetadataService>
+            <uds:DocuSignMetadataFilterService />
+          </uds:DocuSignServiceFactory.MetadataService>
+        </uds:DocuSignServiceFactory>
+      </uda:DocuSignScopeActivity.ServiceFactory>
+      <uda:DocuSignScopeActivity.SupportedAuthTypes>
+        <scg:List x:TypeArguments="use:AuthType" Capacity="4">
+          <use:AuthType>OAuth2AuthorizationCode</use:AuthType>
+          <use:AuthType>ExistingConnection</use:AuthType>
+        </scg:List>
+      </uda:DocuSignScopeActivity.SupportedAuthTypes>
+      <uda:DocuSignScopeActivity.SwaggerClient>
+        <usm:SwaggerClient ClientAssembly="UiPath.DocuSign" ClientNamespace="UiPath.DocuSign">
+          <usm:SwaggerClient.SwaggerMetadata>
+            <usm:SwaggerMetadata TestConnectionClient="{x:Null}" TestConnectionMethod="{x:Null}" BaseUrl="https://demo.docusign.net/restapi">
+              <usm:SwaggerMetadata.RequiredFields>
+                <scg:Dictionary x:TypeArguments="x:String, scg:List(x:String)">
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: accounts_getaccount" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: accounts_deleteaccount" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: billingcharges_getaccountbillingcharges" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="invoices: billinginvoices_getbillinginvoices" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="invoices: billinginvoices_getbillinginvoice" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>invoiceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="invoices: billinginvoices_getbillinginvoicespastdue" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="payments: billingpayments_getpaymentlist" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="payments: billingpayments_postpayment" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="payments: billingpayments_getpayment" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>paymentid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="billingplans: billingplan_getbillingplan" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="billingplans: billingplan_putbillingplan" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="billingplans: billingplan_getcreditcardinfo" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="billingplans: billingplan_getdowngraderequestbillinginfo" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="billingplans: billingplan_putdowngradeaccountbillingplan" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="billingplans: purchasedenvelopes_putpurchasedenvelopes" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brands_getbrands" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brands_postbrands" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brands_deletebrands" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brand_getbrand" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brand_putbrand" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brand_deletebrand" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brandexport_getbrandexportfile" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brandlogo_getbrandlogo" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                    <x:String>logotype</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brandlogo_putbrandlogo" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                    <x:String>logotype</x:String>
+                    <x:String>logofilebytes</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brandlogo_deletebrandlogo" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                    <x:String>logotype</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brandresources_getbrandresourceslist" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brandresources_getbrandresources" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                    <x:String>resourcecontenttype</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountbrands: brandresources_putbrandresources" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>brandid</x:String>
+                    <x:String>resourcecontenttype</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bulksend: bulksendv2crud_getbulksendlists" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bulksend: bulksendv2crud_postbulksendlist" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bulksend: bulksendv2crud_getbulksendlist" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>bulksendlistid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bulksend: bulksendv2crud_putbulksendlist" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>bulksendlistid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bulksend: bulksendv2crud_deletebulksendlist" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>bulksendlistid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bulksend: bulksendv2send_postbulksendrequest" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>bulksendlistid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bulksend: bulksendv2test_postbulksendtestrequest" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>bulksendlistid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: captiverecipients_deletecaptiverecipientspart" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientpart</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="chunkeduploads: chunkeduploads_postchunkeduploads" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="chunkeduploads: chunkeduploads_getchunkedupload" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>chunkeduploadid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="chunkeduploads: chunkeduploads_putchunkeduploads" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>chunkeduploadid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="chunkeduploads: chunkeduploads_deletechunkedupload" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>chunkeduploadid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="chunkeduploads: chunkeduploads_putchunkeduploadpart" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>chunkeduploadid</x:String>
+                    <x:String>chunkeduploadpartseq</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectconfigurations: connect_getconnectconfigs" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectconfigurations: connect_putconnectconfiguration" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectconfigurations: connect_postconnectconfiguration" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectconfigurations: connect_getconnectconfig" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>connectid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectconfigurations: connect_deleteconnectconfig" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>connectid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectconfigurations: connect_getconnectusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>connectid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectevents: connectpublish_putconnectretrybyenvelope" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectevents: connectpublish_putconnectretry" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectevents: connectfailures_getconnectlogs" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectevents: connectfailures_deleteconnectfailurelog" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>failureid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectevents: connectlog_getconnectlogs" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectevents: connectlog_deleteconnectlogs" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectevents: connectlog_getconnectlog" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>logid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="connectevents: connectlog_deleteconnectlog" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>logid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountconsumerdisclosures: consumerdisclosure_getconsumerdisclosure" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountconsumerdisclosures: consumerdisclosure_getconsumerdisclosurelangcode" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>langcode</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountconsumerdisclosures: consumerdisclosure_putconsumerdisclosure" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>langcode</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="contacts: contacts_putcontacts" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="contacts: contacts_postcontacts" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="contacts: contacts_deletecontacts" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="contacts: contacts_getcontactbyid" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>contactid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="contacts: contacts_deletecontactwithid" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>contactid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountcustomfields: accountcustomfields_getaccountcustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountcustomfields: accountcustomfields_postaccountcustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountcustomfields: accountcustomfields_putaccountcustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>customfieldid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountcustomfields: accountcustomfields_deleteaccountcustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>customfieldid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: envelopes_getenvelopes" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: envelopes_postenvelopes" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: envelopes_getenvelope" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: envelopes_putenvelope" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeattachments: attachments_getattachments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeattachments: attachments_putattachments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeattachments: attachments_deleteattachments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeattachments: attachments_getattachment" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>attachmentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeattachments: attachments_putattachment" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>attachmentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: auditevents_getauditevents" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="comments: comments_getcommentstranscript" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopecustomfields: customfields_getcustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopecustomfields: customfields_putcustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopecustomfields: customfields_postcustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopecustomfields: customfields_deletecustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocuments: documents_getdocuments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocuments: documents_putdocuments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocuments: documents_deletedocuments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocuments: documents_getdocument" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocuments: documents_putdocument" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumentfields: documentfields_getdocumentfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumentfields: documentfields_putdocumentfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumentfields: documentfields_postdocumentfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumentfields: documentfields_deletedocumentfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumenthtmldefinitions: responsivehtml_getenvelopedocumenthtmldefinitions" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: pages_getpageimages" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: pages_deletepage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>pagenumber</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: pages_getpageimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>pagenumber</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: pages_putpageimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>pagenumber</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumenttabs: tabs_getpagetabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>pagenumber</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="documentresponsivehtmlpreview: responsivehtml_postdocumentresponsivehtmlpreview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumenttabs: tabs_getdocumenttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumenttabs: tabs_putdocumenttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumenttabs: tabs_postdocumenttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumenttabs: tabs_deletedocumenttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetemplates: templates_getdocumenttemplates" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetemplates: templates_postdocumenttemplates" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetemplates: templates_deletedocumenttemplates" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeemailsettings: emailsettings_getemailsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeemailsettings: emailsettings_putemailsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeemailsettings: emailsettings_postemailsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeemailsettings: emailsettings_deleteemailsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeformdata: formdata_getformdata" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopehtmldefinitions: responsivehtml_getenvelopehtmldefinitions" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopelocks: lock_getenvelopelock" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopelocks: lock_putenvelopelock" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopelocks: lock_postenvelopelock" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopelocks: lock_deleteenvelopelock" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: notification_getenvelopesenvelopeidnotification" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: notification_putenvelopesenvelopeidnotification" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipients: recipients_getrecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipients: recipients_putrecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipients: recipients_postrecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipients: recipients_deleterecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipients: recipients_deleterecipient" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeconsumerdisclosures: consumerdisclosure_getconsumerdisclosureenvelopeidrecipientid" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeconsumerdisclosures: consumerdisclosure_getconsumerdisclosureenvelopeidrecipientidlangcode" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>langcodepath</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumentvisibility: recipients_getrecipientdocumentvisibility" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumentvisibility: recipients_putrecipientdocumentvisibility" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipients: recipients_postrecipientprooffileresourcetoken" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: recipients_getrecipientinitialsimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: recipients_putrecipientinitialsimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: recipients_getrecipientsignature" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: recipients_getrecipientsignatureimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: recipients_putrecipientsignatureimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipienttabs: recipients_getrecipienttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipienttabs: recipients_putrecipienttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipienttabs: recipients_postrecipienttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipienttabs: recipients_deleterecipienttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                    <x:String>recipientid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopedocumentvisibility: recipients_putrecipientsdocumentvisibility" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="responsivehtmlpreview: responsivehtml_postresponsivehtmlpreview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="tabsblob: tabsblob_gettabsblob" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="tabsblob: tabsblob_puttabsblob" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetemplates: templates_getenvelopetemplates" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetemplates: templates_postenvelopetemplates" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeviews: views_postenvelopecorrectview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeviews: views_postenvelopeeditview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeviews: views_postenveloperecipientview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enveloperecipients: views_postenveloperecipientpreview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeviews: views_postenvelopesenderview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeviews: views_postenveloperecipientsharedview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopeid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopes: envelopes_putstatus" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetransferrules: envelopetransferrules_getenvelopetransferrules" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetransferrules: envelopetransferrules_putenvelopetransferrules" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetransferrules: envelopetransferrules_postenvelopetransferrules" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetransferrules: envelopetransferrules_putenvelopetransferrule" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopetransferruleid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopetransferrules: envelopetransferrules_deleteenvelopetransferrules" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>envelopetransferruleid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="favoritetemplates: favoritetemplates_getfavoritetemplates" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="favoritetemplates: favoritetemplates_putfavoritetemplate" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="favoritetemplates: favoritetemplates_unfavoritetemplate" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="folders: folders_getfolders" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="folders: folders_getfolderitems" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>folderid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="folders: folders_putfolderbyid" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>folderid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groups: groups_getgroups" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groups: groups_putgroups" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groups: groups_postgroups" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groups: groups_deletegroups" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groupbrands: brands_getgroupbrands" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>groupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groupbrands: brands_putgroupbrands" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>groupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groupbrands: brands_deletegroupbrands" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>groupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groupusers: groups_getgroupusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>groupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groupusers: groups_putgroupusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>groupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="groupusers: groups_deletegroupusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>groupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="identityverifications: accountidentityverification_getaccountidentityverification" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="paymentgatewayaccounts: paymentgatewayaccounts_getallpaymentgatewayaccounts" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountpermissionprofiles: permissionprofiles_getpermissionprofiles" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountpermissionprofiles: permissionprofiles_postpermissionprofiles" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountpermissionprofiles: permissionprofiles_getpermissionprofile" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>permissionprofileid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountpermissionprofiles: permissionprofiles_putpermissionprofiles" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>permissionprofileid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountpermissionprofiles: permissionprofiles_deletepermissionprofiles" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>permissionprofileid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="powerforms: powerforms_getpowerformslist" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="powerforms: powerforms_postpowerform" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="powerforms: powerforms_deletepowerformslist" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="powerforms: powerforms_getpowerform" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>powerformid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="powerforms: powerforms_putpowerform" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>powerformid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="powerforms: powerforms_deletepowerform" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>powerformid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="powerformdata: powerforms_getpowerformformdata" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>powerformid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="powerforms: powerforms_getpowerformssenders" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: recipientnames_getrecipientnames" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountsealproviders: accountsignatureproviders_getsealproviders" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="folders: searchfolders_getsearchfoldercontents" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>searchfolderid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: settings_getsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: settings_putsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bccemailarchive: bccemailarchive_getbccemailarchivelist" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bccemailarchive: bccemailarchive_postbccemailarchive" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bccemailarchive: bccemailarchive_getbccemailarchivehistorylist" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>bccemailarchiveid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="bccemailarchive: bccemailarchive_deletebccemailarchive" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>bccemailarchiveid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enoteconfigurations: enoteconfiguration_getenoteconfiguration" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enoteconfigurations: enoteconfiguration_putenoteconfiguration" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="enoteconfigurations: enoteconfiguration_deleteenoteconfiguration" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: envelopepurgeconfiguration_getenvelopepurgeconfiguration" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: envelopepurgeconfiguration_putenvelopepurgeconfiguration" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: notificationdefaults_getnotificationdefaults" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: notificationdefaults_putnotificationdefaults" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountpasswordrules: accountpasswordrules_getaccountpasswordrules" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountpasswordrules: accountpasswordrules_putaccountpasswordrules" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounttabsettings: tabsettings_gettabsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounttabsettings: tabsettings_putsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: sharedaccess_getsharedaccess" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: sharedaccess_putsharedaccess" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountsignatureproviders: accountsignatureproviders_getsignatureproviders" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroups: signinggroups_getsigninggroups" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroups: signinggroups_putsigninggroups" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroups: signinggroups_postsigninggroups" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroups: signinggroups_deletesigninggroups" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroups: signinggroups_getsigninggroup" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>signinggroupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroups: signinggroups_putsigninggroup" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>signinggroupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroupusers: signinggroups_getsigninggroupusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>signinggroupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroupusers: signinggroups_putsigninggroupusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>signinggroupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="signinggroupusers: signinggroups_deletesigninggroupusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>signinggroupid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: supportedlanguages_getsupportedlanguages" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="customtabs: tabs_gettabdefinitions" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="customtabs: tabs_posttabdefinitions" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="customtabs: tab_getcustomtab" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>customtabid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="customtabs: tab_putcustomtab" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>customtabid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="customtabs: tab_deletecustomtab" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>customtabid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: templates_gettemplates" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: templates_posttemplates" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: templates_gettemplate" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: templates_puttemplate" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: templates_puttemplatepart" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                    <x:String>templatepart</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: templates_deletetemplatepart" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                    <x:String>templatepart</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatecustomfields: customfields_gettemplatecustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatecustomfields: customfields_puttemplatecustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatecustomfields: customfields_posttemplatecustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatecustomfields: customfields_deletetemplatecustomfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocuments: documents_gettemplatedocuments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocuments: documents_puttemplatedocuments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocuments: documents_deletetemplatedocuments" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocuments: documents_gettemplatedocument" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocuments: documents_puttemplatedocument" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumentfields: documentfields_gettemplatedocumentfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumentfields: documentfields_puttemplatedocumentfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumentfields: documentfields_posttemplatedocumentfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumentfields: documentfields_deletetemplatedocumentfields" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumenthtmldefinitions: responsivehtml_gettemplatedocumenthtmldefinitions" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: pages_gettemplatepageimages" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: pages_deletetemplatepage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>pagenumber</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: pages_gettemplatepageimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>pagenumber</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: pages_puttemplatepageimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>pagenumber</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumenttabs: tabs_gettemplatepagetabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>pagenumber</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumentresponsivehtmlpreview: responsivehtml_posttemplatedocumentresponsivehtmlpreview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumenttabs: tabs_gettemplatedocumenttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumenttabs: tabs_puttemplatedocumenttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumenttabs: tabs_posttemplatedocumenttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumenttabs: tabs_deletetemplatedocumenttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>documentid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatehtmldefinitions: responsivehtml_gettemplatehtmldefinitions" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatelocks: lock_gettemplatelock" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatelocks: lock_puttemplatelock" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatelocks: lock_posttemplatelock" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatelocks: lock_deletetemplatelock" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: notification_gettemplatestemplateidnotification" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templates: notification_puttemplatestemplateidnotification" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipients: recipients_gettemplaterecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipients: recipients_puttemplaterecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipients: recipients_posttemplaterecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipients: recipients_deletetemplaterecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipients: recipients_deletetemplaterecipient" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatebulkrecipients: recipients_gettemplatebulkrecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatebulkrecipients: recipients_puttemplatebulkrecipients" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatebulkrecipients: recipients_deletetemplatebulkrecipientsfile" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumentvisibility: recipients_gettemplaterecipientdocumentvisibility" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumentvisibility: recipients_puttemplaterecipientdocumentvisibility" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipienttabs: recipients_gettemplaterecipienttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipienttabs: recipients_puttemplaterecipienttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipienttabs: recipients_posttemplaterecipienttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipienttabs: recipients_deletetemplaterecipienttabs" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>recipientid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templatedocumentvisibility: recipients_puttemplaterecipientsdocumentvisibility" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templateresponsivehtmlpreview: responsivehtml_posttemplateresponsivehtmlpreview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templateviews: views_posttemplateeditview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="templaterecipients: views_posttemplaterecipientpreview" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>templateid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accounts: unsupportedfiletypes_getunsupportedfiletypes" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: users_getusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: users_putusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: users_postusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: users_deleteusers" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: user_getuser" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: user_putuser" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="cloudstorageproviders: cloudstorage_getcloudstorageproviders" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="cloudstorageproviders: cloudstorage_postcloudstorage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="cloudstorageproviders: cloudstorage_deletecloudstorageproviders" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="cloudstorageproviders: cloudstorage_getcloudstorage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>serviceid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="cloudstorageproviders: cloudstorage_deletecloudstorage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>serviceid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="cloudstorage: cloudstoragefolder_getcloudstoragefolderall" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>serviceid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="cloudstorage: cloudstoragefolder_getcloudstoragefolder" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>folderid</x:String>
+                    <x:String>serviceid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usercustomsettings: usercustomsettings_getcustomsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usercustomsettings: usercustomsettings_putcustomsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usercustomsettings: usercustomsettings_deletecustomsettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="userprofiles: userprofile_getprofile" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="userprofiles: userprofile_putprofile" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: userprofileimage_getuserprofileimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: userprofileimage_putuserprofileimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: userprofileimage_deleteuserprofileimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: usersettings_getusersettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="users: usersettings_putusersettings" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_getusersignatures" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_putusersignature" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_postusersignatures" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_getusersignature" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>signatureid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_putusersignaturebyid" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>signatureid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_deleteusersignature" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>signatureid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_getusersignatureimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>imagetype</x:String>
+                    <x:String>signatureid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_putusersignatureimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>imagetype</x:String>
+                    <x:String>signatureid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="usersignatures: usersignatures_deleteusersignatureimage" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>imagetype</x:String>
+                    <x:String>signatureid</x:String>
+                    <x:String>userid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="envelopeviews: views_postaccountconsoleview" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountwatermarks: watermark_getwatermark" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountwatermarks: watermark_putwatermark" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="accountwatermarks: watermarkpreview_putwatermarkpreview" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaces: workspace_getworkspaces" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaces: workspace_postworkspace" Capacity="4">
+                    <x:String>accountid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaces: workspace_getworkspace" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaces: workspace_putworkspace" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaces: workspace_deleteworkspace" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaceitems: workspacefolder_getworkspacefolder" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>folderid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaceitems: workspacefolder_deleteworkspaceitems" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>folderid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaceitems: workspacefile_postworkspacefiles" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>folderid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaceitems: workspacefile_getworkspacefile" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>fileid</x:String>
+                    <x:String>folderid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaceitems: workspacefile_putworkspacefile" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>fileid</x:String>
+                    <x:String>folderid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="workspaceitems: workspacefilepages_getworkspacefilepages" Capacity="4">
+                    <x:String>accountid</x:String>
+                    <x:String>fileid</x:String>
+                    <x:String>folderid</x:String>
+                    <x:String>workspaceid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="billingplans: billingplans_getbillingplan" Capacity="4">
+                    <x:String>billingplanid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="notaryjurisdiction: notaryjurisdictions_getnotaryjurisdiction" Capacity="4">
+                    <x:String>jurisdictionid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="notaryjurisdiction: notaryjurisdictions_putnotaryjurisdiction" Capacity="4">
+                    <x:String>jurisdictionid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="notaryjurisdiction: notaryjurisdictions_deletenotaryjurisdiction" Capacity="4">
+                    <x:String>jurisdictionid</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:String" x:Key="requestlogs: apirequestlog_getrequestlog" Capacity="4">
+                    <x:String>requestlogid</x:String>
+                  </scg:List>
+                </scg:Dictionary>
+              </usm:SwaggerMetadata.RequiredFields>
+              <usm:SwaggerMetadata.SecuritySchemes>
+                <scg:Dictionary x:TypeArguments="x:String, usm:SwaggerSecurityDefinition">
+                  <usm:SwaggerSecurityDefinition AccessTokenKeyName="{x:Null}" ApiKeyName="{x:Null}" Description="{x:Null}" RefreshUrl="{x:Null}" Scheme="{x:Null}" x:Key="OAuth2AuthorizationCode" AccessTokenKeyLocation="Header" ApiKeyLocation="Undefined" AuthType="OAuth2AuthorizationCode" AuthorizationUrl="https://account-d.docusign.com/oauth/auth" Name="OAuth2AuthorizationCode" TokenUrl="https://account-d.docusign.com/oauth/token">
+                    <usm:SwaggerSecurityDefinition.Scopes>
+                      <scg:Dictionary x:TypeArguments="x:String, x:String">
+                        <x:String x:Key="scope">signature</x:String>
+                      </scg:Dictionary>
+                    </usm:SwaggerSecurityDefinition.Scopes>
+                  </usm:SwaggerSecurityDefinition>
+                </scg:Dictionary>
+              </usm:SwaggerMetadata.SecuritySchemes>
+            </usm:SwaggerMetadata>
+          </usm:SwaggerClient.SwaggerMetadata>
+        </usm:SwaggerClient>
+      </uda:DocuSignScopeActivity.SwaggerClient>
+    </uda:DocuSignScopeActivity>
+  </Sequence>
+</Activity>
