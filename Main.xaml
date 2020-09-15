@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="516,945" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.DocuSign.Activities" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.DocuSign" xmlns:ud="clr-namespace:UiPath.DocuSign;assembly=UiPath.DocuSign" xmlns:uda="clr-namespace:UiPath.DocuSign.Activities;assembly=UiPath.DocuSign.Activities" xmlns:udae="clr-namespace:UiPath.DocuSign.Activities.Envelope;assembly=UiPath.DocuSign.Activities" xmlns:uds="clr-namespace:UiPath.DocuSign.Service;assembly=UiPath.DocuSign" xmlns:use="clr-namespace:UiPath.Swagger.Enums;assembly=UiPath.DocuSign" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.DocuSign" xmlns:uss="clr-namespace:UiPath.Swagger.Services;assembly=UiPath.DocuSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="516,768" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.DocuSign.Activities" xmlns:uda="clr-namespace:UiPath.DocuSign.Activities;assembly=UiPath.DocuSign.Activities" xmlns:uds="clr-namespace:UiPath.DocuSign.Service;assembly=UiPath.DocuSign" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:use="clr-namespace:UiPath.Swagger.Enums;assembly=UiPath.DocuSign" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.DocuSign" xmlns:uss="clr-namespace:UiPath.Swagger.Services;assembly=UiPath.DocuSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -50,7 +50,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="496,845" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="496,668" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="cred" />
     </Sequence.Variables>
@@ -67,46 +67,7 @@
         <InArgument x:TypeArguments="x:String">f3d17554-23c1-4fd8-b29d-84daf0b13822</InArgument>
       </Assign.Value>
     </Assign>
-    <udae:GetFormData Status="{x:Null}" ConfiguredBusinessEntity="EnvelopeFormData: FormData_GetFormData" DesignConnectionEnabled="False" DisplayName="Get Form Data" sap:VirtualizedContainerService.HintSize="454,236" sap2010:WorkflowViewState.IdRef="GetFormData_1" ScopeActivityType="uda:DocuSignScopeActivity">
-      <udae:GetFormData.BusinessEntity>
-        <ubme:BusinessEntity Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="Get Form Data">
-          <ubme:BusinessEntity.AllFields>
-            <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
-          </ubme:BusinessEntity.AllFields>
-          <ubme:BusinessEntity.EntityMetadata>
-            <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="Get Form Data">
-              <ubme:EntityMetadata.Metadata>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-                  <x:Type Type="ud:EnvelopeFormDataOpenApiClient" x:Key="Client" />
-                </scg:Dictionary>
-              </ubme:EntityMetadata.Metadata>
-            </ubme:EntityMetadata>
-          </ubme:BusinessEntity.EntityMetadata>
-          <ubme:BusinessEntity.SelectedFields>
-            <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
-          </ubme:BusinessEntity.SelectedFields>
-        </ubme:BusinessEntity>
-      </udae:GetFormData.BusinessEntity>
-      <udae:GetFormData.SelectedFields>
-        <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
-          <usm:SwaggerEntityField ContainingType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Account Id of the user." DisplayName="Account Id" FieldName="AccountId" IsCustomField="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True">
-            <usm:SwaggerEntityField.ArgumentValue>
-              <InArgument x:TypeArguments="x:String" />
-            </usm:SwaggerEntityField.ArgumentValue>
-          </usm:SwaggerEntityField>
-          <usm:SwaggerEntityField ContainingType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Id of the envelope." DisplayName="Envelope Id" FieldName="EnvelopeId" IsCustomField="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True">
-            <usm:SwaggerEntityField.ArgumentValue>
-              <InArgument x:TypeArguments="x:String" />
-            </usm:SwaggerEntityField.ArgumentValue>
-          </usm:SwaggerEntityField>
-          <usm:SwaggerEntityField ContainingType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="ud:EnvelopeFormData" DataType="EnvelopeFormData" Description="Form Data of the Envelope" DisplayName="Form Data" FieldName="EnvelopeFormData" IsCustomField="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False">
-            <usm:SwaggerEntityField.ArgumentValue>
-              <OutArgument x:TypeArguments="ud:EnvelopeFormData" />
-            </usm:SwaggerEntityField.ArgumentValue>
-          </usm:SwaggerEntityField>
-        </scg:List>
-      </udae:GetFormData.SelectedFields>
-    </udae:GetFormData>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="454,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;hi &quot;]" />
     <uda:DocuSignScopeActivity APIKey="{x:Null}" BearerToken="{x:Null}" DesignConnectionRequest="{x:Null}" ExistingConnection="{x:Null}" Password="{x:Null}" SwaggerConnection="{x:Null}" Username="{x:Null}" AuthType="OAuth2AuthorizationCode" BaseUrl="https://demo.docusign.net" ClientId="4844a4ee-3027-4e86-a07e-544cbf6d3f22" ClientSecret="[New System.Net.NetworkCredential(&quot;&quot;,cred).SecurePassword]" DesignConnectionEnabled="False" DisplayName="DocuSign Application Scope" Environment="Production" ExistingConnectionType="usm:SwaggerConnection" sap:VirtualizedContainerService.HintSize="454,377" sap2010:WorkflowViewState.IdRef="DocuSignScopeActivity_1" TelemetryEnabled="False" ThrowExceptionOnError="True">
       <uda:DocuSignScopeActivity.Body>
         <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
